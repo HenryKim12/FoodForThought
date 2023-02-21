@@ -1,7 +1,7 @@
 import { Parallax } from 'react-parallax';
-import Food from '../images/food.jpg';
+import Food from '../images/fridge.jpg';
 
-const ImageOne = () => (
+const ImageTwo = () => (
     <Parallax className="image2" bgImage={Food} strength={800}>
         <div className='content1'>
             <span className='img-txt'>Delicious Meals</span>
@@ -9,4 +9,4 @@ const ImageOne = () => (
     </Parallax>
 );
 
-export default ImageOne;
+export default ImageTwo;

@@ -1,21 +1,17 @@
 import ImageOne from "../components/ImageOne";
-import ImageTwo from "../components/ImageTwo";
-import ImageThree from "../components/ImageThree";
 import Bar from "../components/Bar";
+import ImageRow from "../components/ImageRow";
+import About from "../components/About";
+import Slideshow from "../components/Slideshow";
 
 function Home() {
     return (
         <div>
             <Bar/> 
             <ImageOne/>
-            <div>
-                "this is where we will lead into the api?"
-            </div>
-            <ImageTwo/>
-            <div>
-
-            </div>
-            <ImageThree/>
+            <About/>
+            <ImageRow />
+            <Slideshow/>
         </div>
     )
 }

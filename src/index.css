@@ -6,11 +6,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Manaco, Consolas, 'Courier New',
-    monospace;
-}
-
 .image1 {
     position: relative;
     height: 100vh;
@@ -24,7 +19,7 @@ code {
     height: 100vh;
     margin-left: 37%;
     margin-top: 25%;
-    width: 100%;
+    font-family: arial black;
 }
 
 .content span.img-txt {
@@ -34,6 +29,15 @@ code {
     padding: 1rem;
     font-size: 1.5rem;
     letter-spacing: 10px;
+    font-family: arial black;
+    display: block;
+}
+
+.findRecipeButton {
+    width: 200px;
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 28%;
 }
 
 .content1 {
@@ -52,6 +56,9 @@ code {
     padding: 1rem;
     font-size: 1.5rem;
     letter-spacing: 10px;
+    text-align: center;
+    height: 100px;
+    width: 100%;
 }
 
 .image2 {
@@ -62,33 +69,39 @@ code {
 
 .image3 {
     position: relative;
-    margin-left: 50%;
     height: 100vh;
     width: 50%;
 }
 
+.imageRow {
+    display: flex;
+}
+
 .bar {
-    background-color: #333;
     display: inline-block;
     width: 100%;
-    height: 100px;
+    height: 80px;
     align-items: center;
+    font-family: arial black;
+    justify-content: space-between;
 }
 
 .menuOptions {
-    background-color: #333;
     font-size: 30px;
     color: white;
     display: flex;
     list-style-type: none;
-    height: 100px;
-    margin-right: 5%;
-    gap: 20px;
+    justify-content: space-between;
 }
 
-.other {
-    display: flex;
-    gap: 10px;
+.main {
+    padding-right: 1000px;
+    padding-top: 1%;
+    justify-content: space-between;
+}
+
+.side {
+    padding-top: 10%;
 }
 
 .bar a {
@@ -102,3 +115,67 @@ a:visited { text-decoration: none; }
 a:hover { text-decoration: none; }
 
 a:active { text-decoration: none; }
+
+.aboutContainer {
+    background-color: lightgray;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: 3px solid black;
+}
+
+.aboutCooking {
+    display: block;
+    width: 200px;
+    text-align: center;
+    margin-right: 15%;
+    margin-left: 12%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.aboutFridge {
+    display: block;
+    width: 200px;
+    text-align: center;
+    margin-right: 15%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.aboutProfits {
+    display: block;
+    width: 200px;
+    text-align: center;
+    margin-right: 15%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.header {
+    padding-left: 20%;
+    display: block;
+}
+
+.caption {
+    padding-left: 30%;
+    display: flex;
+    font-weight: bold;
+}
+
+.paragraph {
+    display: block;
+    width: 300px;
+    text-align: center;
+}
+
+.png {
+    width: 200px;
+    height: 200px;
+}
+
+.slide1 {
+    width: 100%;
+    height: 900px;
+    filter: brightness(50%);
+}
