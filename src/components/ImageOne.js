@@ -13,7 +13,7 @@ function ImageOne() {
     return (
         <Parallax className="image1" bgImage={Fridge} strength={800}>
         <div className='content'>
-            <span className='img-txt'>Food For Thought.</span>
+            <span className='img-txt'>Food For Thought</span>
             <Button className="findRecipeButton" onClick={routeChange}>Find a Recipe</Button>
         </div>
     </Parallax>

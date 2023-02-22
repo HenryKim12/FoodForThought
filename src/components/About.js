@@ -20,7 +20,7 @@ export default function About() {
                         <h className="caption">Don't waste, use everything!</h>
                 </div>
                 <p className="paragraph">Food should never be wasted. There is a purpose for every item in your fridge. If the 
-                expiraction date is approaching, make something with it!
+                expiration date is approaching, make something with it!
                 </p>
             </div>  
             <div className="aboutProfits">
