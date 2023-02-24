@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Search from "./Search"
 import { useNavigate } from "react-router-dom";
+import RecipeList from "./RecipeList";
 
 function RecipeAPI(props) {    
     const [recipes, setRecipes] = useState([]);
@@ -8,11 +9,11 @@ function RecipeAPI(props) {
     const [update, setUpdate] = useState(false);
     let res = []
 
-    const navigate = useNavigate();
-    const routeChange = () => {
-        const path = "/results"
-        navigate(path);
-    }
+    // const navigate = useNavigate();
+    // const routeChange = () => {
+    //     const path = "/results"
+    //     navigate(path);
+    // }
 
     useEffect(() => {
         function setStates() {
@@ -42,12 +43,7 @@ function RecipeAPI(props) {
         <div>
             <button onClick={fetchRecipes}>Submit</button>
             <div>
-                {recipes.map(recipe => 
-                    <div>
-                        {recipe.title}
-                        <img className="foodImg" src={recipe.image}/>
-                    </div>)
-                }
+                {recipes.map(recipe => <RecipeList id={recipe.id}/>)}
             </div>
         </div>
     );

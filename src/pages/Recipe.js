@@ -12,7 +12,7 @@ export default function Recipe(props) {
         <div>
             <Bar/>
             <Search food={food} setFood={setFood} recipes={recipes}/>
-            <RecipeAPI food={food} setFood={setFood} />
+            {/* <RecipeAPI food={food} setFood={setFood} /> */}
         </div>
     );
 }
