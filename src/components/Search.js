@@ -35,7 +35,7 @@ export default function Search(props) {
 
         let response = await fetch(`https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?query=${props.food}/`, options)
         let data = await response.json();
-
+        console.log(data);
         setRecipes(data.results);
     }
 
@@ -51,9 +51,30 @@ export default function Search(props) {
         let response = await fetch(`https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/${id}/information`, options)
         let data = await response.json();
         // console.log(data);
-        console.log(data.sourceUrl);
+        // console.log(data.sourceUrl);
         setLinks(data.sourceUrl);
     }
+
+    // return (
+    //     <div className='searchPage'>
+    //         <Form>
+    //         <Form.Group className="mb-3" controlId="formBasicFood">
+    //                 <div className='searchBar'>
+    //                     <Form.Label className='label'>Recipe</Form.Label>
+    //                     <input type="text" placeholder='Enter food (ie. pasta)' onChange={getSearch} />
+    //                     <Form.Text className="text-muted">
+    //                     Enter the name of food you want ie. pasta
+    //                     </Form.Text>
+    //                 </div>
+    //             </Form.Group>
+    //         </Form>
+    //         <Button className="submitButton" onClick={fetchRecipes}>Submit</Button>
+    //         {recipes[0]}
+    //         {/* {recipes.map(recipe => <a>{recipe.title}</a>)} */}
+    //         {/* {recipes && <RecipeList recipeList={recipes}></RecipeList>} */}
+    //     </div>
+        
+    // );
 
     return (
         <div className='searchPage'>
@@ -75,13 +96,11 @@ export default function Search(props) {
                     <div className='recipeInfo'>
                         {recipe.title}
                         <img src={recipe.image}/>
-                        <Button onClick={fetchActualRecipe(recipe.id)}>Go to recipe</Button>
-                        <a href={links}>Go to recipe</a>
-                        {/* <a>{links}</a> */}
+                        <Button href={links} onClick={fetchActualRecipe(recipe.id)}>Go to recipe</Button>
                     </div>
                 </div>
                 )}
-            </div>
+            </div>\
         </div>
     );
 }
