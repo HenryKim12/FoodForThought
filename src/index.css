@@ -9,6 +9,8 @@ body {
 .image1 {
     position: relative;
     height: 100vh;
+    align-items: center;
+    width: 100%;
 }
 
 .content {
@@ -16,8 +18,8 @@ body {
     align-items: center;
     justify-content: center;
     position: absolute;
-    height: 100vh;
-    margin-left: 37%;
+    height: inherit;
+    margin-left: 36%;
     margin-top: 25%;
     font-family: arial black;
 }
@@ -206,6 +208,7 @@ a:active { text-decoration: none; }
 .searchPage {
     display: block;
     align-items: center;
+    width: 100%;
 }
 
 .submitButton {
@@ -214,19 +217,34 @@ a:active { text-decoration: none; }
 }
 
 .listofRecipes {
-    display: table;
+    display: inline-block;
     width: 100%;
     /* overflow: hidden; */
     /* justify-content: space-between; */
+    /* background-color: blue; */
 }
 
 .recipeInfo {
-    display: inline-block;
-    margin-right: 2%;
-    border: 1px solid black;
+    display: block;
+    /* margin-right: 2%; */
+    border: 3px solid black;
     margin-top: 2%;
-    margin-left: 2%;
+    /* margin-left: 2%; */
     justify-content: space-between;
-    width: 400px;
-    height: 300px;
+    width: 317px;
+    height: 280px;
+}
+
+.recipeContainer {
+    display: inline-block;
+    margin-left: 6%;
+    margin-right: 6%;
+    padding-top: 2px;
+}
+
+.title {
+    padding-right: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }

@@ -55,33 +55,13 @@ export default function Search(props) {
         setLinks(data.sourceUrl);
     }
 
-    // return (
-    //     <div className='searchPage'>
-    //         <Form>
-    //         <Form.Group className="mb-3" controlId="formBasicFood">
-    //                 <div className='searchBar'>
-    //                     <Form.Label className='label'>Recipe</Form.Label>
-    //                     <input type="text" placeholder='Enter food (ie. pasta)' onChange={getSearch} />
-    //                     <Form.Text className="text-muted">
-    //                     Enter the name of food you want ie. pasta
-    //                     </Form.Text>
-    //                 </div>
-    //             </Form.Group>
-    //         </Form>
-    //         <Button className="submitButton" onClick={fetchRecipes}>Submit</Button>
-    //         {recipes[0]}
-    //         {/* {recipes.map(recipe => <a>{recipe.title}</a>)} */}
-    //         {/* {recipes && <RecipeList recipeList={recipes}></RecipeList>} */}
-    //     </div>
-        
-    // );
 
     return (
         <div className='searchPage'>
             <Form>
                 <Form.Group className="mb-3" controlId="formBasicFood">
                     <div className='searchBar'>
-                        <Form.Label className='label'>Recipe</Form.Label>
+                        <Form.Label className='label'>Find the best recipes</Form.Label>
                         <input type="text" placeholder='Enter food (ie. pasta)' onChange={getSearch} />
                         <Form.Text className="text-muted">
                         Enter the name of food you want ie. pasta
@@ -92,15 +72,17 @@ export default function Search(props) {
             <Button className="submitButton" onClick={fetchRecipes}>Submit</Button>
             <div className="listofRecipes">
                 {recipes.map(recipe => 
-                <div>
+                <div className="recipeContainer">
                     <div className='recipeInfo'>
-                        {recipe.title}
                         <img src={recipe.image}/>
-                        <Button href={links} onClick={fetchActualRecipe(recipe.id)}>Go to recipe</Button>
+                        <div className='titleandbutton'>
+                            <a className='title'>{recipe.title}</a>
+                            <Button className="recipebutton" href={links} onClick={fetchActualRecipe(recipe.id)}>Go to recipe</Button>
+                        </div>
                     </div>
                 </div>
                 )}
-            </div>\
+            </div>
         </div>
     );
 }
